@@ -5,7 +5,7 @@
 # Site
 title: 我的博客
 subtitle: ''
-description: ''
+description: 记录编程与学习笔记
 keywords:
 author: John Doe
 language: zh-CN
@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://boom7979.github.io
+url: https://yyboom.me
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -43,7 +43,7 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-syntax_highlighter: highlight.js
+syntax_highlighter: ""
 highlight:
   line_number: true
   auto_detect: false
@@ -96,7 +96,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: butterfly
+theme: shokax
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
