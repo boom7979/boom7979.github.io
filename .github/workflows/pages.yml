@@ -19,6 +19,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          TZ: Asia/Shanghai
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public
