@@ -1,0 +1,37 @@
+.text-emphasis {
+  color: red;
+}
+
+.blog-search {
+  width: min(36rem, calc(100% - 2rem));
+  max-height: 80vh;
+  padding: 1.5rem;
+  color: var(--text-color, CanvasText);
+  background: var(--grey-0, Canvas);
+  border: 1px solid var(--grey-4, GrayText);
+  border-radius: 0.75rem;
+}
+
+.blog-search::backdrop {
+  background: rgb(0 0 0 / 50%);
+}
+
+.blog-search form {
+  float: right;
+}
+
+.blog-search input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  border: 1px solid var(--grey-4, GrayText);
+}
+
+.blog-search li {
+  margin-block: 0.5rem;
+}
+
+.blog-search small {
+  display: block;
+}

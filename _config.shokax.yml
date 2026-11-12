@@ -1,0 +1,14 @@
+alternate: blossom
+
+menu:
+  home: / || home
+  学习笔记: /categories/learning-notes/ || list-alt
+  项目经历: /projects/ || feather
+  archives: /archives/ || list-alt
+  tags: /tags/ || tags
+
+footer:
+  since: 2026
+
+social:
+  github: 'https://github.com/boom7979/boom7979.github.io || github || "#191717"'

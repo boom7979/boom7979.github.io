@@ -2,6 +2,8 @@
 title: Servlet 学习笔记
 date: 2026-11-11 00:00:00
 permalink: /2026/11/10/servlet-notes/
+categories:
+  - 学习笔记
 tags:
   - Java
   - Servlet

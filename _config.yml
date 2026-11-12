@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 我的博客
+title: 路漫漫其修远兮，吾将上下而求索
 subtitle: ''
 description: 记录编程与学习笔记
 keywords:
-author: John Doe
+author: yy
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -67,6 +67,7 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  学习笔记: learning-notes
 tag_map:
 
 # Metadata elements
