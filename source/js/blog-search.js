@@ -18,23 +18,34 @@ function findPosts(posts, query) {
 function initBlogSearch(scriptUrl) {
   const indexUrl = new URL('../blog-search.json', scriptUrl);
   const dialog = document.createElement('dialog');
+  dialog.id = 'search';
   dialog.className = 'blog-search';
-  dialog.setAttribute('aria-labelledby', 'blog-search-title');
+  dialog.setAttribute('aria-label', '搜索文章');
   dialog.innerHTML = `
-    <form method="dialog">
-      <button type="submit" aria-label="关闭搜索">关闭</button>
-    </form>
-    <h2 id="blog-search-title">搜索文章</h2>
-    <label for="blog-search-input">文章标题或标签</label>
-    <input id="blog-search-input" type="search" autofocus>
-    <p role="status"></p>
-    <ul></ul>
+    <div class="inner">
+      <div class="header">
+        <span class="icon"><i class="ic i-search" aria-hidden="true"></i></span>
+        <div class="search-input-container">
+          <input class="search-input" type="search" aria-label="文章标题或标签" placeholder="输入文章标题或标签" autofocus>
+        </div>
+        <form method="dialog">
+          <button class="close-btn" type="submit" aria-label="关闭搜索"><i class="ic i-times-circle" aria-hidden="true"></i></button>
+        </form>
+      </div>
+      <div class="results">
+        <div class="inner">
+          <p id="search-stats" role="status"></p>
+          <hr>
+          <div id="search-hits"><ol></ol></div>
+        </div>
+      </div>
+    </div>
   `;
   document.body.append(dialog);
 
   const input = dialog.querySelector('input');
   const status = dialog.querySelector('[role="status"]');
-  const results = dialog.querySelector('ul');
+  const results = dialog.querySelector('#search-hits ol');
   let index;
   let request = 0;
 
@@ -61,14 +72,15 @@ function initBlogSearch(scriptUrl) {
 
       for (const post of matches) {
         const item = document.createElement('li');
+        item.className = 'item';
         const link = document.createElement('a');
         link.href = new URL(post.path, indexUrl).href;
         link.textContent = post.title;
         item.append(link);
         if (post.tags.length) {
-          const tags = document.createElement('small');
+          const tags = document.createElement('span');
           tags.textContent = post.tags.join(' · ');
-          item.append(tags);
+          link.append(tags);
         }
         results.append(item);
       }
@@ -104,8 +116,12 @@ function initBlogSearch(scriptUrl) {
     }
   }, true);
   input.addEventListener('input', search);
-  results.addEventListener('click', (event) => {
-    if (event.target.closest('a')) dialog.close();
+  dialog.addEventListener('click', (event) => {
+    const target = event.target;
+    if (target.closest('.results') ||
+        (target.closest('.header') && !target.closest('input, button'))) {
+      dialog.close();
+    }
   });
 }
 

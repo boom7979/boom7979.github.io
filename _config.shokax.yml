@@ -6,6 +6,8 @@ menu:
   项目经历: /projects/ || feather
   archives: /archives/ || list-alt
   tags: /tags/ || tags
+  关于: /about/ || user
+  friends: /friends/ || heart
 
 footer:
   since: 2026
