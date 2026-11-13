@@ -13,13 +13,13 @@
 | 第一批 | 作者头像 | 已替换 | 个人头像存放在 `source/_data/assets/avatar.jpg`，构建后可通过 `/assets/avatar.jpg` 访问 | `sidebar.avatar` |
 | 第一批 | 打赏及收款码 | 待处理 | 打赏默认开启，微信和支付宝二维码图片缺失。可先关闭，或提供公开收款码后替换 | `reward.enable`、`reward.account` |
 | 第二批 | 浏览器图标和苹果设备图标 | 已确认保留 | ShokaX 自带图标 | `icon` |
-| 第二批 | 首页头图和文章封面 | 待决定 | 当前为 Unsplash 风景图，可换图片或单独固定首页头图 | `source/_data/images.yml`、`homeConfig.fixedCover` |
+| 第二批 | 首页头图和文章封面 | 已替换 | 首页固定使用 1.jpg 转换的 WebP，文章按封面列表顺序循环 | `source/_data/images.yml`、`scripts/blog-covers.js` |
 | 第二批 | 页脚年份和主题署名 | 已更新 | 起始年为 2026，保留 Hexo 和 ShokaX 署名 | `footer.since`、`footer.powered` |
 | 第二批 | 文章授权声明 | 已确认保留 | 原创文章沿用 CC BY-NC-SA 4.0 | `creative_commons` |
 | 第三批 | 导航 | 已更新 | 首页、学习笔记、项目经历、归档、标签、关于、友链 | `menu` |
 | 第三批 | 站内搜索 | 已更新 | ShokaX 全屏搜索样式，按标题和标签做部分匹配，支持空格组合关键词 | `scripts/blog-search.js`、`source/js/blog-search.js`、`source/css/blog.css` |
 | 第三批 | 关于页 | 已接入 | 简短介绍及博客仓库链接 | `source/about/index.md` |
-| 第三批 | 友链页 | 已接入 | 暂无友链，已列出本站交换友链所需的信息 | `source/friends/index.md` |
+| 第三批 | 友链页 | 已接入 | 已列出五个常逛的博客和本站信息 | `source/friends/index.md` |
 | 第三批 | 评论 | 暂缓 | Twikoo 和 Waline 均未启用 | `twikoo`、`waline` |
 | 第三批 | 音乐播放器 | 暂缓 | 默认开启但未配置歌单，已知会出现初始化错误 | `modules.player`、`audio` |
 | 第三批 | 项目经历 | 已恢复为公开页面 | 首页展示项目摘要，深度学习视觉处理可视化平台和 SelfAOI 各有独立详情页 | `source/projects/` |

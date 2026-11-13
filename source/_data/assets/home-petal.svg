@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="浅粉色樱花花瓣">
+  <title>浅粉色花瓣</title>
+  <desc>纯矢量 SVG，透明背景。淡粉色花瓣轮廓、柔和的填充及三条细叶脉。</desc>
+  <defs>
+    <radialGradient id="petal-fill" cx="52%" cy="45%" r="68%">
+      <stop offset="0%" stop-color="#ffd0e0"/>
+      <stop offset="62%" stop-color="#ffc3d9"/>
+      <stop offset="100%" stop-color="#ffb0ce"/>
+    </radialGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ed78a6"/>
+      <stop offset="52%" stop-color="#df578e"/>
+      <stop offset="100%" stop-color="#e66499"/>
+    </linearGradient>
+    <linearGradient id="vein-up" x1="0" y1="1" x2="0.75" y2="0">
+      <stop offset="0%" stop-color="#ed73a3" stop-opacity="0.78"/>
+      <stop offset="60%" stop-color="#f286af" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#f286af" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="vein-left" x1="0" y1="1" x2="0.5" y2="0">
+      <stop offset="0%" stop-color="#e96398" stop-opacity="0.53"/>
+      <stop offset="100%" stop-color="#e96398" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="vein-right" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d94782" stop-opacity="0.59"/>
+      <stop offset="100%" stop-color="#d94782" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 花瓣外轮廓：手工整理为可编辑的贝塞尔曲线 -->
+  <path id="petal" d="M 584,200
+    C 562,198 506,222 452,253
+    C 367,301 310,369 281,443
+    C 254,512 259,604 291,683
+    C 307,726 313,762 322,785
+    C 328,805 349,814 364,810
+    C 410,796 461,794 516,783
+    C 610,765 679,709 715,642
+    C 758,566 768,496 754,399
+    C 746,345 735,288 717,267
+    C 704,252 691,253 672,257
+    C 660,260 657,242 650,236
+    C 641,229 627,242 618,228
+    C 608,211 599,199 584,200 Z"
+    fill="url(#petal-fill)" stroke="url(#edge)" stroke-width="9.5" stroke-linejoin="round"/>
+
+  <!-- 边缘的半透明白色反光 -->
+  <path d="M 574,210 C 535,216 444,266 394,307
+    C 323,365 289,424 275,487
+    C 264,551 274,630 299,688"
+    fill="none" stroke="#ffe3ed" stroke-opacity="0.72" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 395,795 C 500,779 568,777 641,718
+    C 718,654 748,574 746,496"
+    fill="none" stroke="#ffe3ed" stroke-opacity="0.68" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- 叶脉，分别保持独立路径，便于后续修改 -->
+  <path id="central-vein" d="M 358,767 C 414,673 511,494 559,412"
+    fill="none" stroke="url(#vein-up)" stroke-width="6.5" stroke-linecap="round"/>
+  <path id="left-vein" d="M 346,763 C 361,706 362,608 377,519"
+    fill="none" stroke="url(#vein-left)" stroke-width="5.5" stroke-linecap="round"/>
+  <path id="right-vein" d="M 380,773 C 420,737 512,677 575,636"
+    fill="none" stroke="url(#vein-right)" stroke-width="6" stroke-linecap="round"/>
+</svg>
