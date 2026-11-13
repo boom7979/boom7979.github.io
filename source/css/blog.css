@@ -2,6 +2,11 @@
   color: red;
 }
 
+/* Ignore indentation before the breadcrumb's metadata element. */
+.article .breadcrumb span[itemprop="name"] {
+  white-space: normal;
+}
+
 .home-petals {
   position: fixed;
   inset: 0;
